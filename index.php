@@ -58,7 +58,7 @@ function PrismaLuas()
         $sisi3 = sqrt(pow($sisi1, 2) + pow($sisi2, 2));
         $tinggi = $_POST["tinggiprisma"];
         $luasPrisma = (2 * ($sisi1 * $sisi2 / 2)) + (($sisi1 + $sisi2 + $sisi3) * ($tinggi));
-        echo $luasPrisma;
+        echo $luasPrisma . ' ' . 'satuan';
     } else {
         echo $luasPrisma = 0;
     }
@@ -72,7 +72,7 @@ function PrismaVol()
         $tinggi = $_POST["tinggiprisma"];
         $volAlasPrisma =  ($sisi1 * $sisi2 / 2) * $tinggi;
 
-        echo $volAlasPrisma;
+        echo $volAlasPrisma . ' ' . 'satuan';
     } else {
         echo $volAlasPrisma = 0;
     }
