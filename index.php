@@ -1,3 +1,84 @@
+<?php
+function KubusLuas()
+{
+    $panjang = 0;
+
+    if (isset($_POST["submit"])) {
+
+        $panjang = $_POST["sisi"];
+        $hasilLuas =  6 * pow($panjang, 2);
+        echo $hasilLuas . ' ' . 'satuan';
+    } else {
+        echo  $hasilLuas = 0;
+    }
+}
+
+function KubusVol()
+{
+    if (isset($_POST["submit"])) {
+        $panjang = $_POST["sisi"];
+        $hasilVol =  pow($panjang, 3);
+        echo $hasilVol . ' ' . 'satuan';
+    } else {
+        echo   $hasilVol = 0;
+    }
+}
+
+function BalokLuas()
+{
+    if (isset($_POST["submit-balok"])) {
+        $panjang = $_POST["panjang"];
+        $lebar = $_POST["lebar"];
+        $tinggi = $_POST["tinggi"];
+        $hasilLuasBalok =  2 * (($panjang * $lebar) + ($panjang * $tinggi) + ($lebar * $tinggi));
+        echo $hasilLuasBalok . ' ' . 'satuan';
+    } else {
+        echo  $hasilLuasBalok = 0;
+    }
+}
+
+function BalokVol()
+{
+    if (isset($_POST["submit-balok"])) {
+        $panjang = $_POST["panjang"];
+        $lebar = $_POST["lebar"];
+        $tinggi = $_POST["tinggi"];
+        $hasilVolBalok = $panjang * $lebar * $tinggi;
+        echo $hasilVolBalok . ' ' . 'satuan';
+    } else {
+        echo   $hasilVolBalok = 0;
+    }
+}
+
+function PrismaLuas()
+{
+    if (isset($_POST["submit-prisma"])) {
+        $sisi1 = $_POST["sisi1"];
+        $sisi2 = $_POST["sisi2"];
+        $sisi3 = sqrt(pow($sisi1, 2) + pow($sisi2, 2));
+        $tinggi = $_POST["tinggiprisma"];
+        $luasPrisma = (2 * ($sisi1 * $sisi2 / 2)) + (($sisi1 + $sisi2 + $sisi3) * ($tinggi));
+        echo $luasPrisma;
+    } else {
+        echo $luasPrisma = 0;
+    }
+}
+
+function PrismaVol()
+{
+    if (isset($_POST["submit-prisma"])) {
+        $sisi1 = $_POST["sisi1"];
+        $sisi2 = $_POST["sisi2"];
+        $tinggi = $_POST["tinggiprisma"];
+        $volAlasPrisma =  ($sisi1 * $sisi2 / 2) * $tinggi;
+
+        echo $volAlasPrisma;
+    } else {
+        echo $volAlasPrisma = 0;
+    }
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -28,39 +109,172 @@
     <section class="col-sm-12 py-5">
         <form action="" method="POST">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-12 mb-5">
-                        <div class="card">
-                            <div class="card-header bg-primary text-light">
-                                <h5 class="card-title">Luas Persegi</h5>
+                <div class="row  d-flex justify-content-center ">
+                    <!-- card 1 balok -->
+                    <div class="col-md-10 mb-5">
+                        <div class="card" style="overflow: hidden;">
+                            <div class="card-header bg-primary text-light d-flex justify-content-center align-items-center">
+                                <h5 class="card-title">Kubus</h5>
                             </div>
                             <div class="card-body">
-                                <div class="mb-3 row">
-                                    <label for="inputPanjang" class="col-sm-2 col-md-2 col-form-label">Panjang</label>
-                                    <div class="col-sm-10 col-md-10">
-                                        <input type="text" class="form-control" id="inputPanjang">
+                                <div class="row">
+                                    <div class="col-lg-3 d-flex justify-content-center align-items-center">
+                                        <img src="https://cdn.medcom.id/dynamic/content/2022/04/13/1413159/0ZwCKUtJdv.JPG?w=480" alt="Kubus" style="width: 240px;">
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <div class="mb-1 row">
+                                            <label for="inputSisi" class="col-sm-3 col-form-label">Sisi</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" name="sisi" class="form-control form-control-sm" id="inputSisi" placeholder="Input Sisi Kubus">
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                            <label class="col-sm-2 col-md-3 col-form-label">Luas</label>
+                                            <div class="col-sm-9 col-md-9 mt-1">
+                                                <h3>
+                                                    <?php
+                                                    KubusLuas();
+                                                    ?>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class=" mb-1 row">
+                                            <label class="col-sm-2 col-md-3 col-form-label">Volume</label>
+                                            <div class="col-sm-9 col-md-9 mt-1">
+                                                <h3>
+                                                    <?php
+                                                    KubusVol();
+                                                    ?>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                            <a href="/PemWeb/TugasPertemuan9/" class="btn btn-md btn-danger">Hapus</a>
+                                            <button type="submit" name="submit" value="submit" class="btn btn-md btn-primary">Hitung</button>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="mb-3 row">
-                                    <label for="inputLebar" class="col-sm-2 col-md-2 col-form-label">Lebar</label>
-                                    <div class="col-sm-10 col-md-10">
-                                        <input type="text" class="form-control" id="inputLebar">
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-md btn-primary">Hitung</button>
                             </div>
                         </div>
                     </div>
 
-
-                    <div class="col-md-6 col-sm-12">
-                        <div class="card">
-                            <div class="card-header bg-primary text-light">
-                                <h5 class="card-title">Luas Persegi</h5>
+                    <!-- Balok -->
+                    <div class="col-md-10 mb-5">
+                        <div class="card" style="overflow: hidden;">
+                            <div class="card-header bg-primary text-light d-flex justify-content-center align-items-center">
+                                <h5 class="card-title">Balok</h5>
                             </div>
                             <div class="card-body">
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <div class="row">
+                                    <div class="col-lg-3 d-flex justify-content-center align-items-center">
+                                        <img src="https://www.99.co/blog/indonesia/wp-content/uploads/2022/04/sisi-balok.jpg" alt="Balok" style="height: 130px;">
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <div class="mb-1 row">
+                                            <label for="inputPanjang" class="col-sm-3 col-form-label">Panjang</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" name="panjang" class="form-control form-control-sm" id="inputPanjang" placeholder="Input Panjang">
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                            <label for="inputLebar" class="col-sm-3 col-form-label">Lebar</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" name="lebar" class="form-control form-control-sm" id="inputLebar" placeholder="Input Lebar">
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                            <label for="inputTinggi" class="col-sm-3 col-form-label">Tinggi</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" name="tinggi" class="form-control form-control-sm" id="inputTinggi" placeholder="Input tinggi">
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                            <label class="col-sm-2 col-md-3 col-form-label">Luas</label>
+                                            <div class="col-sm-9 col-md-9 mt-1">
+                                                <h3>
+                                                    <?php
 
+                                                    BalokLuas();
+                                                    ?>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class=" mb-1 row">
+                                            <label class="col-sm-2 col-md-3 col-form-label">Volume</label>
+                                            <div class="col-sm-9 col-md-9 mt-1">
+                                                <h3>
+                                                    <?php
+                                                    BalokVol();
+                                                    ?>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                            <a href="/PemWeb/TugasPertemuan9/" class="btn btn-md btn-danger">Hapus</a>
+                                            <button type="submit" name="submit-balok" value="submit" class="btn btn-md btn-primary">Hitung</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prisma segitiga -->
+                    <div class="col-md-10 mb-5">
+                        <div class="card" style="overflow: hidden;">
+                            <div class="card-header bg-primary text-light d-flex justify-content-center align-items-center">
+                                <h5 class="card-title">Prisma Segitiga</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-3 d-flex justify-content-center align-items-center">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCj__HnNll4oTqSQZpTXcFv6r1QsY6ljVC1CsuX514HHRjqwKIaB65tif6NKiJOnLfnaY&usqp=CAU" alt="Prisma Segitiga" style="height: 200px;">
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <div class="mb-1 row">
+                                            <label for="sisi1" class="col-sm-3 col-form-label">Sisi alas</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" name="sisi1" class="form-control form-control-sm" id="sisi1" placeholder="Sisi alas segitiga dari (AB/AC/CB)">
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                            <label for="sisi2" class="col-sm-3 col-form-label">Sisi alas</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" name="sisi2" class="form-control form-control-sm" id="sisi2" placeholder="Sisi tinggi alas segitiga dari (AB/AC/CB)">
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                            <label for="inputTinggiprisma" class="col-sm-3 col-form-label">Tinggi</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" name="tinggiprisma" class="form-control form-control-sm" id="inputTinggiprisma" placeholder="Input tinggi">
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                            <label class="col-sm-2 col-md-3 col-form-label">Luas</label>
+                                            <div class="col-sm-9 col-md-9 mt-1">
+                                                <h3>
+                                                    <?php
+                                                    PrismaLuas();
+                                                    ?>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class=" mb-1 row">
+                                            <label class="col-sm-2 col-md-3 col-form-label">Volume</label>
+                                            <div class="col-sm-9 col-md-9 mt-1">
+                                                <h3>
+                                                    <?php
+                                                    PrismaVol();
+                                                    ?>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                            <a href="/PemWeb/TugasPertemuan9/" class="btn btn-md btn-danger">Hapus</a>
+                                            <button type="submit" name="submit-prisma" value="submit" class="btn btn-md btn-primary">Hitung</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
