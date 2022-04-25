@@ -1,3 +1,28 @@
+<?php
+function kapsulVolume(){
+    if(isSubmit("submit-kapsul")){
+        $jari = input("rKapsul");
+        $tinggi = input("tKapsul");
+        $PHI = $jari % 7 == 0 ? 22/7 : 3.1415926535898;
+        $hasilVolumeKapsul = 4/3 * $PHI * pow($jari,3)+ $PHI * pow($jari,2) * $tinggi;
+        return round($hasilVolumeKapsul,2) . " Satuan";
+    }else{
+        return 0 . " Satuan";
+    }
+}
+
+function kapsulLuasPermukaan(){
+    if(isSubmit("submit-kapsul")){
+        $jari = input("rKapsul");
+        $tinggi = input("tKapsul");
+        $PHI = $jari % 7 == 0 ? 22/7 : 3.1415926535898;
+        $hasilLuasPermukaanKapsul = 4 * $PHI * pow($jari,2) + 2 * $PHI * $jari * $tinggi;
+        return round($hasilLuasPermukaanKapsul,2) . " Satuan";
+    }else{
+        return 0 . " Satuan";
+    }
+}
+?>
 <section id="kapsul" class="col-md-10 mb-5">
     <form action="#kapsul" method="POST">
         <div class="card" style="overflow: hidden;">

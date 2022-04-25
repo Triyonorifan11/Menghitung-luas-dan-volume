@@ -1,3 +1,33 @@
+
+<?php
+
+function tabungVolume()
+{
+    if(isSubmit("submit-tabung")){
+        $jari = input("rTabung");
+        $tinggi = input("tTabung");
+        $PHI = $jari % 7 == 0 ? 22/7 : 3.1415926535898;
+        $hasilVolumeTabung = ($PHI * pow($jari, 2) * $tinggi);
+        return round($hasilVolumeTabung,2) . " Satuan";
+    }else{
+        return 0 ;
+    }
+}
+
+
+function tabungLuasPermukaan(){
+    if(isSubmit("submit-tabung")){
+        $jari = input("rTabung");
+        $tinggi = input("tTabung");
+        $PHI = $jari % 7 == 0 ? 22/7 : 3.1415926535898;
+        $hasilLuasPermukaanTabung = (2 * $PHI * $jari * ($jari + $tinggi));
+        return round($hasilLuasPermukaanTabung,2) . " Satuan";
+    }else{
+        return 0 . " Satuan";
+    }
+}
+?>
+
 <!-- Tabung -->
 <section id="tabung" class="col-md-10 mb-5">
     <form action="#tabung" method="POST">

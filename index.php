@@ -146,57 +146,6 @@ function LimasSegiempatVolume()
 }
 
 
-function tabungVolume()
-{
-    if(isSubmit("submit-tabung")){
-        $jari = input("rTabung");
-        $tinggi = input("tTabung");
-        $PHI = $jari % 7 == 0 ? 22/7 : 3.1415926535898;
-        $hasilVolumeTabung = ($PHI * pow($jari, 2) * $tinggi);
-        return round($hasilVolumeTabung,2) . " Satuan";
-    }else{
-        return 0 ;
-    }
-}
-
-
-function tabungLuasPermukaan(){
-    if(isSubmit("submit-tabung")){
-        $jari = input("rTabung");
-        $tinggi = input("tTabung");
-        $PHI = $jari % 7 == 0 ? 22/7 : 3.1415926535898;
-        $hasilLuasPermukaanTabung = (2 * $PHI * $jari * ($jari + $tinggi));
-        return round($hasilLuasPermukaanTabung,2) . " Satuan";
-    }else{
-        return 0 . " Satuan";
-    }
-}
-
-
-function kapsulVolume(){
-    if(isSubmit("submit-kapsul")){
-        $jari = input("rKapsul");
-        $tinggi = input("tKapsul");
-        $PHI = $jari % 7 == 0 ? 22/7 : 3.1415926535898;
-        $hasilVolumeKapsul = 4/3 * $PHI * pow($jari,3)+ $PHI * pow($jari,2) * $tinggi;
-        return round($hasilVolumeKapsul,2) . " Satuan";
-    }else{
-        return 0 . " Satuan";
-    }
-}
-
-function kapsulLuasPermukaan(){
-    if(isSubmit("submit-kapsul")){
-        $jari = input("rKapsul");
-        $tinggi = input("tKapsul");
-        $PHI = $jari % 7 == 0 ? 22/7 : 3.1415926535898;
-        $hasilLuasPermukaanKapsul = 4 * $PHI * pow($jari,2) + 2 * $PHI * $jari * $tinggi;
-        return round($hasilLuasPermukaanKapsul,2) . " Satuan";
-    }else{
-        return 0 . " Satuan";
-    }
-}
-
 
 ?>
 
@@ -541,7 +490,7 @@ function kapsulLuasPermukaan(){
                     ?>
 
 
-                    <!-- kapsul -->
+                    <!-- Kapsul -->
                     <?php
                         require_once("kapsul.php");
                     ?>
