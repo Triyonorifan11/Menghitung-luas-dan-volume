@@ -663,15 +663,9 @@ function kapsulLuasPermukaan(){
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
-        function checkKey() {
-            var clean = this.value.replace(/[^0-9,]/g, "")
-                                .replace(/(,.*?),(.*,)?/, "$1");
-            // don't move cursor to end if no change
-            if (clean !== this.value) this.value = clean;
-        }
-
-        // demo
-        document.querySelector('input').oninput = checkKey;
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
     </script>
 </body>
 
