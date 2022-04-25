@@ -244,14 +244,14 @@ function kapsulLuasPermukaan(){
                                     </div>
                                     <div class="col-lg-9">
                                         <div class="mb-1 row">
-                                            <label for="inputSisi" class="col-sm-3 col-form-label">Sisi</label>
-                                            <div class="col-sm-9">
+                                            <label for="inputSisi" class="col-md-3 col-form-label">Sisi</label>
+                                            <div class="col-md-9">
                                                 <input type="text" name="sisi" value="<?=input("sisi")?>" class="form-control form-control-sm" id="inputSisi" placeholder="Input Sisi Kubus">
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
                                             <label class="col-sm-2 col-md-3 col-form-label">Luas</label>
-                                            <div class="col-sm-9 col-md-9 mt-1">
+                                            <div class="col-md-9 col-md-9 mt-1">
                                                 <h3>
                                                     <?php
                                                     KubusLuas();
@@ -261,7 +261,7 @@ function kapsulLuasPermukaan(){
                                         </div>
                                         <div class=" mb-1 row">
                                             <label class="col-sm-2 col-md-3 col-form-label">Volume</label>
-                                            <div class="col-sm-9 col-md-9 mt-1">
+                                            <div class="col-md-9 col-md-9 mt-1">
                                                 <h3>
                                                     <?php
                                                     KubusVol();
@@ -294,26 +294,26 @@ function kapsulLuasPermukaan(){
                                     </div>
                                     <div class="col-lg-9">
                                         <div class="mb-1 row">
-                                            <label for="inputPanjang" class="col-sm-3 col-form-label">Panjang</label>
-                                            <div class="col-sm-9">
+                                            <label for="inputPanjang" class="col-md-3 col-form-label">Panjang</label>
+                                            <div class="col-md-9">
                                                 <input type="text" name="panjang" value="<?=input("panjang")?>" class="form-control form-control-sm" id="inputPanjang" placeholder="Input Panjang">
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
-                                            <label for="inputLebar" class="col-sm-3 col-form-label">Lebar</label>
-                                            <div class="col-sm-9">
+                                            <label for="inputLebar" class="col-md-3 col-form-label">Lebar</label>
+                                            <div class="col-md-9">
                                                 <input type="text" name="lebar" value="<?=input("lebar")?>" class="form-control form-control-sm" id="inputLebar" placeholder="Input Lebar">
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
-                                            <label for="inputTinggi" class="col-sm-3 col-form-label">Tinggi</label>
-                                            <div class="col-sm-9">
+                                            <label for="inputTinggi" class="col-md-3 col-form-label">Tinggi</label>
+                                            <div class="col-md-9">
                                                 <input type="text" name="tinggi" value="<?=input("tinggi")?>" class="form-control form-control-sm" id="inputTinggi" placeholder="Input tinggi">
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
                                             <label class="col-sm-2 col-md-3 col-form-label">Luas</label>
-                                            <div class="col-sm-9 col-md-9 mt-1">
+                                            <div class="col-md-9 col-md-9 mt-1">
                                                 <h3>
                                                     <?php
 
@@ -324,7 +324,7 @@ function kapsulLuasPermukaan(){
                                         </div>
                                         <div class=" mb-1 row">
                                             <label class="col-sm-2 col-md-3 col-form-label">Volume</label>
-                                            <div class="col-sm-9 col-md-9 mt-1">
+                                            <div class="col-md-9 col-md-9 mt-1">
                                                 <h3>
                                                     <?php
                                                     BalokVol();
@@ -357,26 +357,26 @@ function kapsulLuasPermukaan(){
                                     </div>
                                     <div class="col-lg-9">
                                         <div class="mb-1 row">
-                                            <label for="sisi1" class="col-sm-3 col-form-label">Sisi alas</label>
-                                            <div class="col-sm-9">
+                                            <label for="sisi1" class="col-md-3 col-form-label">Sisi alas</label>
+                                            <div class="col-md-9">
                                                 <input type="text" name="sisi1" value="<?=input("sisi1")?>" class="form-control form-control-sm" id="sisi1" placeholder="Sisi alas segitiga dari (AB/AC/CB)">
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
-                                            <label for="sisi2" class="col-sm-3 col-form-label">Sisi alas</label>
-                                            <div class="col-sm-9">
+                                            <label for="sisi2" class="col-md-3 col-form-label">Sisi alas</label>
+                                            <div class="col-md-9">
                                                 <input type="text" name="sisi2" value="<?=input("sisi2")?>" class="form-control form-control-sm" id="sisi2" placeholder="Sisi tinggi alas segitiga dari (AB/AC/CB)">
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
-                                            <label for="inputTinggiprisma" class="col-sm-3 col-form-label">Tinggi</label>
-                                            <div class="col-sm-9">
+                                            <label for="inputTinggiprisma" class="col-md-3 col-form-label">Tinggi</label>
+                                            <div class="col-md-9">
                                                 <input type="text" name="tinggiprisma" value="<?=input("tinggiprisma")?>" class="form-control form-control-sm" id="inputTinggiprisma" placeholder="Input tinggi">
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
                                             <label class="col-sm-2 col-md-3 col-form-label">Luas</label>
-                                            <div class="col-sm-9 col-md-9 mt-1">
+                                            <div class="col-md-9 col-md-9 mt-1">
                                                 <h3>
                                                     <?php
                                                     PrismaLuas();
@@ -386,7 +386,7 @@ function kapsulLuasPermukaan(){
                                         </div>
                                         <div class=" mb-1 row">
                                             <label class="col-sm-2 col-md-3 col-form-label">Volume</label>
-                                            <div class="col-sm-9 col-md-9 mt-1">
+                                            <div class="col-md-9 col-md-9 mt-1">
                                                 <h3>
                                                     <?php
                                                     PrismaVol();
@@ -419,32 +419,32 @@ function kapsulLuasPermukaan(){
                                     </div>
                                     <div class="col-lg-9">
                                         <div class="mb-1 row">
-                                            <label for="inputAlas" class="col-sm-3 col-form-label">Alas</label>
-                                            <div class="col-sm-9">
+                                            <label for="inputAlas" class="col-md-3 col-form-label">Alas</label>
+                                            <div class="col-md-9">
                                                 <input type="text" name="alas" value="<?=input("alas")?>" class="form-control form-control-sm" id="inputAlas" placeholder="Input Alas">
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
-                                            <label for="inputTinggiAlas" class="col-sm-3 col-form-label">Tinggi Alas</label>
-                                            <div class="col-sm-9">
+                                            <label for="inputTinggiAlas" class="col-md-3 col-form-label">Tinggi Alas</label>
+                                            <div class="col-md-9">
                                                 <input type="text" name="tinggialas" value="<?=input("tinggialas")?>" class="form-control form-control-sm" id="inputTinggiAlas" placeholder="Input Tinggi Alas">
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
-                                            <label for="inputTinggiLimas" class="col-sm-3 col-form-label">Tinggi Limas</label>
-                                            <div class="col-sm-9">
+                                            <label for="inputTinggiLimas" class="col-md-3 col-form-label">Tinggi Limas</label>
+                                            <div class="col-md-9">
                                                 <input type="text" name="tinggilimas" value="<?=input("tinggilimas")?>" class="form-control form-control-sm" id="inputTinggiLimas" placeholder="Input Tinggi Limas">
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
-                                            <label for="inputTinggiSisiMiring" class="col-sm-3 col-form-label">Tinggi Sisi Miring</label>
-                                            <div class="col-sm-9">
+                                            <label for="inputTinggiSisiMiring" class="col-md-3 col-form-label">Tinggi Sisi Miring</label>
+                                            <div class="col-md-9">
                                                 <input type="text" name="tinggisisimiring" value="<?=input("tinggisisimiring")?>" class="form-control form-control-sm" id="inputTinggiSisiMiring" placeholder="Input Tinggi Sisi Miring">
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
                                             <label class="col-sm-2 col-md-3 col-form-label">Luas</label>
-                                            <div class="col-sm-9 col-md-9 mt-1">
+                                            <div class="col-md-9 col-md-9 mt-1">
                                                 <h3>
                                                     <?php
                                                     LimasSegitigaLuas();
@@ -454,7 +454,7 @@ function kapsulLuasPermukaan(){
                                         </div>
                                         <div class=" mb-1 row">
                                             <label class="col-sm-2 col-md-3 col-form-label">Volume</label>
-                                            <div class="col-sm-9 col-md-9 mt-1">
+                                            <div class="col-md-9 col-md-9 mt-1">
                                                 <h3>
                                                     <?php
                                                     LimasSegitigaVolume();
@@ -487,26 +487,26 @@ function kapsulLuasPermukaan(){
                                         </div>
                                         <div class="col-lg-9">
                                             <div class="mb-1 row">
-                                                <label for="inputSisiAlas" class="col-sm-3 col-form-label">Sisi Alas</label>
-                                                <div class="col-sm-9">
+                                                <label for="inputSisiAlas" class="col-md-3 col-form-label">Sisi Alas</label>
+                                                <div class="col-md-9">
                                                     <input type="text" name="sisialas" value="<?=input("sisialas")?>"  class="form-control form-control-sm" id="inputSisiAlas" placeholder="Input Sisi Alas">
                                                 </div>
                                             </div>
                                             <div class="mb-1 row">
-                                                <label for="inputTinggiLimas2" class="col-sm-3 col-form-label">Tinggi Limas</label>
-                                                <div class="col-sm-9">
+                                                <label for="inputTinggiLimas2" class="col-md-3 col-form-label">Tinggi Limas</label>
+                                                <div class="col-md-9">
                                                     <input type="text" name="tinggilimas2" value="<?=input("tinggilimas2")?>" class="form-control form-control-sm" id="inputTinggiLimas2" placeholder="Input Tinggi Limas">
                                                 </div>
                                             </div>
                                             <div class="mb-1 row">
-                                                <label for="inputTinggiSisiMiring2" class="col-sm-3 col-form-label">Tinggi Sisi Miring</label>
-                                                <div class="col-sm-9">
+                                                <label for="inputTinggiSisiMiring2" class="col-md-3 col-form-label">Tinggi Sisi Miring</label>
+                                                <div class="col-md-9">
                                                     <input type="text" name="tinggisisimiring2" value="<?=input("tinggisisimiring2")?>"  class="form-control form-control-sm" id="inputTinggiSisiMiring2" placeholder="Input Tinggi Sisi Miring">
                                                 </div>
                                             </div>
                                             <div class="mb-1 row">
                                                 <label class="col-sm-2 col-md-3 col-form-label">Luas</label>
-                                                <div class="col-sm-9 col-md-9 mt-1">
+                                                <div class="col-md-9 col-md-9 mt-1">
                                                     <h3>
                                                         <?php
                                                         LimasSegiempatLuas();
@@ -516,7 +516,7 @@ function kapsulLuasPermukaan(){
                                             </div>
                                             <div class=" mb-1 row">
                                                 <label class="col-sm-2 col-md-3 col-form-label">Volume</label>
-                                                <div class="col-sm-9 col-md-9 mt-1">
+                                                <div class="col-md-9 col-md-9 mt-1">
                                                     <h3>
                                                         <?php
                                                         LimasSegiempatVolume();
@@ -549,21 +549,21 @@ function kapsulLuasPermukaan(){
                                         </div>
                                         <div class="col-lg-9">
                                             <div class="mb-1 row">
-                                                <label for="inputRadiusTabung" class="col-sm-3 col-form-label">Jari-jari</label>
-                                                <div class="col-sm-9">
+                                                <label for="inputRadiusTabung" class="col-md-3 col-form-label">Jari-jari</label>
+                                                <div class="col-md-9">
                                                     <input type="text" name="rTabung" value="<?=input("rTabung")?>"  class="form-control form-control-sm" id="inputRadiusTabung" placeholder="Input Jari-jari Alas">
                                                 </div>
                                             </div>
                                             <div class="mb-1 row">
-                                                <label for="inputTinggiTabung" class="col-sm-3 col-form-label">Tinggi Tabung</label>
-                                                <div class="col-sm-9">
+                                                <label for="inputTinggiTabung" class="col-md-3 col-form-label">Tinggi Tabung</label>
+                                                <div class="col-md-9">
                                                     <input type="text" name="tTabung" value="<?=input("tTabung")?>" class="form-control form-control-sm" id="inputTinggiTabung" placeholder="Input Tinggi Tabung">
                                                 </div>
                                             </div>
                                             <?php if(isSubmit("submit-tabung")) :?>
                                             <div class="mb-1 row">
                                                 <label class="col-sm-2 col-md-3 col-form-label">Luas</label>
-                                                <div class="col-sm-9 col-md-9 mt-1">
+                                                <div class="col-md-9 col-md-9 mt-1">
                                                     <h3>
                                                         <?=tabungVolume()?>
                                                     </h3>
@@ -571,7 +571,7 @@ function kapsulLuasPermukaan(){
                                             </div>
                                             <div class=" mb-1 row">
                                                 <label class="col-sm-2 col-md-3 col-form-label">Volume</label>
-                                                <div class="col-sm-9 col-md-9 mt-1">
+                                                <div class="col-md-9 col-md-9 mt-1">
                                                     <h3>
                                                         <?=tabungLuasPermukaan()?>
                                                     </h3>
@@ -579,7 +579,9 @@ function kapsulLuasPermukaan(){
                                             </div>
                                             <?php endif;?>
                                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                                <a href="" class="btn btn-md btn-danger">Hapus</a>
+                                                <?php if(isSubmit("submit-tabung")) :?>
+                                                    <a href="" class="btn btn-md btn-danger">Hapus</a>
+                                                <?php endif;?>
                                                 <button type="submit" name="submit-tabung" value="submit" class="btn btn-md btn-primary">Hitung</button>
                                             </div>
                                         </div>
@@ -604,21 +606,21 @@ function kapsulLuasPermukaan(){
                                         </div>
                                         <div class="col-lg-9">
                                             <div class="mb-1 row">
-                                                <label for="inputRadiusKapsul" class="col-sm-3 col-form-label">Jari-jari</label>
-                                                <div class="col-sm-9">
+                                                <label for="inputRadiusKapsul" class="col-md-3 col-form-label">Jari-jari</label>
+                                                <div class="col-md-9">
                                                     <input type="text" name="rKapsul" value="<?=input("rKapsul")?>"  class="form-control form-control-sm" id="inputRadiusKapsul" placeholder="Input Jari-jari Alas">
                                                 </div>
                                             </div>
                                             <div class="mb-1 row">
-                                                <label for="inputTinggiKapsul" class="col-sm-3 col-form-label">Tinggi Kapsul</label>
-                                                <div class="col-sm-9">
+                                                <label for="inputTinggiKapsul" class="col-md-3 col-form-label">Tinggi Kapsul</label>
+                                                <div class="col-md-9">
                                                     <input type="text" name="tKapsul" value="<?=input("tKapsul")?>" class="form-control form-control-sm" id="inputTinggiKapsul" placeholder="Input Tinggi Kapsul">
                                                 </div>
                                             </div>
                                             <?php if(isSubmit("submit-kapsul")) :?>
                                             <div class="mb-1 row">
                                                 <label class="col-sm-2 col-md-3 col-form-label">Luas</label>
-                                                <div class="col-sm-9 col-md-9 mt-1">
+                                                <div class="col-md-9 col-md-9 mt-1">
                                                     <h3>
                                                         <?=kapsulVolume()?>
                                                     </h3>
@@ -626,7 +628,7 @@ function kapsulLuasPermukaan(){
                                             </div>
                                             <div class=" mb-1 row">
                                                 <label class="col-sm-2 col-md-3 col-form-label">Volume</label>
-                                                <div class="col-sm-9 col-md-9 mt-1">
+                                                <div class="col-md-9 col-md-9 mt-1">
                                                     <h3>
                                                         <?=kapsulLuasPermukaan()?>
                                                     </h3>
@@ -634,7 +636,9 @@ function kapsulLuasPermukaan(){
                                             </div>
                                             <?php endif;?>
                                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                                <a href="" class="btn btn-md btn-danger">Hapus</a>
+                                                <?php if(isSubmit("submit-kapsul")) :?>
+                                                    <a href="" class="btn btn-md btn-danger">Hapus</a>
+                                                <?php endif;?>
                                                 <button type="submit" name="submit-kapsul" value="submit" class="btn btn-md btn-primary">Hitung</button>
                                             </div>
                                         </div>
@@ -658,7 +662,17 @@ function kapsulLuasPermukaan(){
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        function checkKey() {
+            var clean = this.value.replace(/[^0-9,]/g, "")
+                                .replace(/(,.*?),(.*,)?/, "$1");
+            // don't move cursor to end if no change
+            if (clean !== this.value) this.value = clean;
+        }
 
+        // demo
+        document.querySelector('input').oninput = checkKey;
+    </script>
 </body>
 
 </html>
