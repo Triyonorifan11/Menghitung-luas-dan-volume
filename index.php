@@ -145,9 +145,56 @@ function LimasSegiempatVolume()
     }
 }
 
+function KerucutLuas()
+{
+    if (isSubmit("submit-kerucut")) {
+        $jarijari = input("jarijari");
+        $garisselimut = input("garisselimut");
+        $tinggikerucut = input("tinggikerucut");
+        $hasilLuasKerucut = (3.14 * $jarijari * ($jarijari + $garisselimut));
+        echo $hasilLuasKerucut . ' ' . 'satuan';
+    } else {
+        echo $hasilLuasKerucut = 0;
+    }
+}
 
+function KerucutVolume()
+{
+    if (isSubmit("submit-kerucut")) {
+        $jarijari = input("jarijari");
+        $garisselimut = input("garisselimut");
+        $tinggikerucut = input("tinggikerucut");
+        $hasilVolKerucut = (1/3 * 3.14 * $jarijari * $jarijari * $tinggikerucut);
+        echo $hasilVolKerucut . ' ' . 'satuan';
+    } else {
+        echo $hasilVolKerucut = 0;
+    }
+}
+
+function BolaLuas()
+{
+    if (isSubmit("submit-bola")) {
+        $jari2 = input("jari2");
+        $hasilLuasBola = 4 * 3.14 * $jari2 * $jari2;
+        echo $hasilLuasBola . ' ' . 'satuan';
+    } else {
+        echo $hasilLuasBola = 0;
+    }
+}
+
+function BolaVolume()
+{
+    if (isSubmit("submit-bola")) {
+        $jari2 = input("jari2");
+        $hasilVolBola = 4/3 * 3.14 * $jari2 * $jari2 * $jari2;
+        echo $hasilVolBola . ' ' . 'satuan';
+    } else {
+        echo $hasilVolBola = 0;
+    }
+}
 
 ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -481,6 +528,118 @@ function LimasSegiempatVolume()
                                     </div>
                                 </div>
                             </div>
+                        </form>
+                    </section>
+
+                    <!-- Kerucut -->
+                    <section id="kerucut" class="col-md-10 mb-5">
+                        <form action="#kerucut" method="POST">
+                            <div class="card" style="overflow: hidden;">
+                                <div class="card-header bg-primary text-light d-flex justify-content-center align-items-center">
+                                    <h5 class="card-title">Kerucut</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-3 d-flex justify-content-center align-items-center">
+                                            <img src="https://upload.wikimedia.org/wikipedia/id/5/5c/Kerucut.JPG" alt="Kerucut" style="height: 160px;">
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <div class="mb-1 row">
+                                                <label for="inputJariJari" class="col-md-3 col-form-label">Jari-Jari</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" name="jarijari" value="<?=input("jarijari")?>"  class="form-control form-control-sm" id="inputJariJari" placeholder="input Jari-Jari">
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                                <label for="inputGarisSelimut" class="col-md-3 col-form-label">Garis Selimut</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" name="garisselimut" value="<?=input("garisselimut")?>" class="form-control form-control-sm" id="inputGarisSelimut" placeholder="Input Garis Selimut">
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                                <label for="inputTinggiKerucut" class="col-md-3 col-form-label">Tinggi Kerucut</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" name="tinggikerucut" value="<?=input("tinggikerucut")?>"  class="form-control form-control-sm" id="inputTinggiKerucut" placeholder="Input Tinggi Kerucut">
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                                <label class="col-sm-2 col-md-3 col-form-label">Luas</label>
+                                                <div class="col-md-9 col-md-9 mt-1">
+                                                    <h3>
+                                                        <?php
+                                                        KerucutLuas();
+                                                        ?>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class=" mb-1 row">
+                                                <label class="col-sm-2 col-md-3 col-form-label">Volume</label>
+                                                <div class="col-md-9 col-md-9 mt-1">
+                                                    <h3>
+                                                        <?php
+                                                        KerucutVolume();
+                                                        ?>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                                <a href="" class="btn btn-md btn-danger">Hapus</a>
+                                                <button type="submit" name="submit-kerucut" value="submit" class="btn btn-md btn-primary">Hitung</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Bola -->
+                    <section id="bola" class="col-md-10 mb-5">
+                        <form action="#bola" method="POST">
+                        <div class="card" style="overflow: hidden;">
+                            <div class="card-header bg-primary text-light d-flex justify-content-center align-items-center">
+                                <h5 class="card-title">Bola</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-3 d-flex justify-content-center align-items-center">
+                                        <img src="https://asset-a.grid.id//crop/0x0:0x0/700x0/photo/2020/04/30/2013063908.png" alt="Bola" style="width: 160px;">
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <div class="mb-1 row">
+                                            <label for="inputjari2" class="col-md-3 col-form-label">Jari-Jari</label>
+                                            <div class="col-md-9">
+                                                <input type="text" name="jari2" value="<?=input("jari2")?>" class="form-control form-control-sm" id="inputJari" placeholder="Input Jari2 Bola">
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                            <label class="col-sm-2 col-md-3 col-form-label">Luas</label>
+                                            <div class="col-md-9 col-md-9 mt-1">
+                                                <h3>
+                                                    <?php
+                                                    BolaLuas();
+                                                    ?>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class=" mb-1 row">
+                                            <label class="col-sm-2 col-md-3 col-form-label">Volume</label>
+                                            <div class="col-md-9 col-md-9 mt-1">
+                                                <h3>
+                                                    <?php
+                                                    BolaVolume();
+                                                    ?>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                            <a href="" class="btn btn-md btn-danger">Hapus</a>
+                                            <button type="submit" name="submit-bola" value="submit" class="btn btn-md btn-primary">Hitung</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         </form>
                     </section>
 
